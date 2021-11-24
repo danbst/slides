@@ -358,6 +358,7 @@ Big
    <script src="revealjs/plugin/notes/notes.js"></script>
    <script src="revealjs/plugin/search/search.js"></script>
    <script src="revealjs/plugin/markdown/markdown.js"></script>
+   <script src="revealjs/plugin/menu/menu.js"></script>
    <script src="revealjs/plugin/highlight/highlight.js"></script>
    <script>
     // Also available as an ES module, see:
@@ -367,9 +368,14 @@ Big
         progress: true,
         center: true,
         hash: true,
+        menu: {
+            themes: true,
+            sticky: true,
+            themesPath: 'revealjs/dist/theme/'
+        },
 
         // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMenu ]
     });
   </script>
  </body>
