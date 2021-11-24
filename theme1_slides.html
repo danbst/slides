@@ -34,7 +34,11 @@
 
 ---
 
-# І як це зробити в Python?
+### І як це зробити в Python?
+
+Наприклад, як вивести на екран "Game Over"?
+
+<img class="r-frame r-stretch" src="./images/theme1_slides/gameover.png" />
 
 ---
 
@@ -171,7 +175,7 @@ print(message)
   Чи **правильно** записана програма.
 <!-- .element: class="fragment" data-fragment-index="0" --> 
 
-* І правила ВИКОНАННЯ ⧐
+* І правила ВИКОНАННЯ <span style="color:green;border:2px solid white">⧐</span>
 
   **Що** станеться, коли запустити програму.
 <!-- .element: class="fragment" data-fragment-index="1" --> 
@@ -264,20 +268,33 @@ test()
 
 ---
 
+<section>
+
 ## Правило 3
 
 Python ігнорує порожні рядки.
 
-```python3 [1|4|7]
-word1 = "Game"
+<img src="./images/theme1_slides/game_over_multline.gif"/>
+
+(але з цього правила є винятки ⇩)
+<!-- .element: style="font-size:20px; color:#666666" -->
+</section><section>
+
+В цьому випадку порожні рядки БУДУТЬ враховані
+
+```python3 []
+print("""Game
 
 
-word2 = "Over"
+Over
 
 
-print(word1, word2)
+THE END!""")
 ```
 
+
+
+</section>
 ---
 
 ## Правило 4
