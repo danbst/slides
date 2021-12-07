@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="revealjs/dist/theme/night.css" id="theme">
   <!-- Theme used for syntax hirevealjs/ghlighting of code -->
   <link rel="stylesheet" href="revealjs/plugin/highlight/zenburn.css">
-  <style>
+  <link rel="stylesheet" href="revealjs/plugin/copycode/copycode.css">
+<style>
 .fragment.current-visible.visible:not(.current-fragment) {
     display: none;
     height:0px;
@@ -204,6 +205,8 @@ print(f"Ну що ж, {username}, зіграємо в гру?")
    <script src="revealjs/plugin/markdown/markdown.js"></script>
    <script src="revealjs/plugin/menu/menu.js"></script>
    <script src="revealjs/plugin/highlight/highlight.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+   <script src="revealjs/plugin/copycode/copycode.js"></script>
    <script>
     // Also available as an ES module, see:
     // https://revealjs.com/initialization/
@@ -219,7 +222,7 @@ print(f"Ну що ж, {username}, зіграємо в гру?")
         },
 
         // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMenu ]
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMenu, CopyCode ]
     });
   </script>
  </body>
