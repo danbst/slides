@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>Тема 1</title>
+  <meta name="description" content="Опис тексту">
+  <meta name="author" content="Автор">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="revealjs/dist/reset.css">
+  <link rel="stylesheet" href="revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="revealjs/dist/theme/moon.css" id="theme">
+  <!-- Theme used for syntax hirevealjs/ghlighting of code -->
+  <link rel="stylesheet" href="revealjs/plugin/highlight/zenburn.css">
+ </head>
+
+ <body>
+  <div class="reveal">
+   <!-- Any section element inside of this container is displayed as a slide -->
+   <div class="slides">
+    <section data-markdown><script type="text/template">
+# Markdown
+
+---
+
+Fragment 1
+<!-- .element: class="fragment" data-fragment-index="0" --> 
+
+Fragment 2
+<!-- .element: class="fragment" data-fragment-index="1" --> 
+
+---
+
+```python3[]
+print("BIG CODE")
+```
+<!-- .element: style="width:60%; font-size:40px" -->
+
+Скроль вниз щоб подивитись інші способи.
+
+⇩
+<!-- .element: style="font-size:150px" -->
+
+</section><section>
+
+---
+
+# І які тут правила?
+
+---
+
+
+## NO ❌
+<!-- .element: class="fragment r-fit-text" data-fragment-index="0" --> 
+
+---
+
+
+Big
+<!-- .element: class="r-fit-text" -->
+
+
+
+    </script></section>
+   </div>
+  </div>
+
+   <script src="revealjs/dist/reveal.js"></script>
+   <script src="revealjs/plugin/zoom/zoom.js"></script>
+   <script src="revealjs/plugin/notes/notes.js"></script>
+   <script src="revealjs/plugin/search/search.js"></script>
+   <script src="revealjs/plugin/markdown/markdown.js"></script>
+   <script src="revealjs/plugin/menu/menu.js"></script>
+   <script src="revealjs/plugin/highlight/highlight.js"></script>
+   <script>
+    // Also available as an ES module, see:
+    // https://revealjs.com/initialization/
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        menu: {
+            themes: true,
+            sticky: true,
+            themesPath: 'revealjs/dist/theme/'
+        },
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMenu ]
+    });
+  </script>
+ </body>
+</html>
+

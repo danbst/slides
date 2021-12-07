@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>Тема 1</title>
+  <meta name="description" content="Опис тексту">
+  <meta name="author" content="Автор">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="revealjs/dist/reset.css">
+  <link rel="stylesheet" href="revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="revealjs/dist/theme/night.css" id="theme">
+  <!-- Theme used for syntax hirevealjs/ghlighting of code -->
+  <link rel="stylesheet" href="revealjs/plugin/highlight/zenburn.css">
+  <style>
+.fragment.current-visible.visible:not(.current-fragment) {
+    display: none;
+    height:0px;
+    line-height: 0px;
+    font-size: 0px;
+}
+
+      
+  </style>
+ </head>
+
+ <body>
+  <div class="reveal">
+   <!-- Any section element inside of this container is displayed as a slide -->
+   <div class="slides">
+    <section data-markdown><script type="text/template">
+## Діалог з юзером
+
+---
+
+### Діалог з юзером
+
+Писати текст на екран -- це прикольно.
+
+---
+
+### Діалог з юзером
+
+Але отримувати щось від юзера, а потім давати відповідь -- це ще прикольніше
+
+---
+
+### Діалог з юзером
+
+Це -- базовий діалог.
+
+1. Питаємо щось у юзера
+2. Чекаємо, коли він відповість
+3. Коли він відповів, запам'ятовуємо його відповідь у змінну
+4. Робимо маніпуляції з цією змінною
+5. Пишемо на екран відповідь
+
+---
+
+<section>
+
+### Діалог з юзером
+
+Давайте розглянемо кожен етап.
+```python[]
+print("Привіт, як тебе звати, юзернейм?")
+answer = input()
+username = answer.strip()
+print(f"Ну що ж, {username}, зіграємо в гру?")
+```
+
+⇩
+<!-- .element: style="font-size:150px" -->
+
+</section><section>
+
+### 1. Питаємо щось у юзера
+
+Питання можна задати різними способами.
+
+Найпростіший --- це просто написати його на екран командою `print()`.
+<!-- .element: class="fragment" data-fragment-index="0" --> 
+
+(було би непогано, щоб юзер вмів читати!!!)
+<!-- .element: style="font-size:20px" -->
+<!-- .element: class="fragment" data-fragment-index="1" --> 
+
+```python[1]
+print("Привіт, як тебе звати, юзернейм?")
+answer = input()
+username = answer.strip()
+print(f"Ну що ж, {username}, зіграємо в гру?")
+```
+<!-- .element: class="fragment fade-up" data-fragment-index="0" --> 
+
+</section><section>
+
+### 2. Чекаємо, коли він відповість
+
+Команда `input()` зупиняє програму і чекає, коли юзер натисне ENTER. 
+<!-- .element: class="fragment" data-fragment-index="0" --> 
+
+Весь написаний юзером текст до ENTER <strong>буде повернуто</strong> з команди
+як <strong>"рядок" (string)</strong>.
+<!-- .element: class="fragment" data-fragment-index="1" --> 
+
+```python[2]
+print("Привіт, як тебе звати, юзернейм?")
+answer = input()
+username = answer.strip()
+print(f"Ну що ж, {username}, зіграємо в гру?")
+```
+<!-- .element: class="fragment" data-fragment-index="3" --> 
+
+</section><section>
+
+### 3. Записати відповідь у змінну
+
+Повернення -- важливо не тільки в Пайтоні, а і в програмуванні в цілому.
+<!-- .element: class="fragment" data-fragment-index="0" --> 
+
+Рядок, який функція повертає, можна записати у змінну, наприклад:
+<!-- .element: class="fragment" data-fragment-index="1" --> 
+
+```python[2]
+print("Привіт, як тебе звати, юзернейм?")
+answer = input()
+username = answer.strip()
+print(f"Ну що ж, {username}, зіграємо в гру?")
+```
+<!-- .element: class="fragment" data-fragment-index="1" --> 
+
+</section><section>
+
+### 4. Щось робимо з відповіддю
+
+Відповідь юзера можна:
+<!-- .element: class="fragment" data-fragment-index="0" --> 
+- валідувати (перевірити, чи юзер все правильно написав)
+<!-- .element: class="fragment" data-fragment-index="1" --> 
+- привести до зручного вигляду
+<!-- .element: class="fragment" data-fragment-index="2" --> 
+- зберегти
+<!-- .element: class="fragment" data-fragment-index="3" --> 
+- використати в обчисленні
+<!-- .element: class="fragment" data-fragment-index="4" --> 
+- і ще багато чого можна зробити
+<!-- .element: class="fragment" data-fragment-index="5" --> 
+
+</section><section>
+
+### 4. Щось робимо з відповіддю
+
+```python[3]
+print("Привіт, як тебе звати, юзернейм?")
+answer = input()
+username = answer.strip()
+print(f"Ну що ж, {username}, зіграємо в гру?")
+```
+
+В цьому випадку, я просто чищу лишні пробіли:
+```
+"     blabla    ".strip()     ---->   "blabla"
+```
+і зберігаю уже "чистий" результат у нову змінну.
+
+</section><section>
+
+### 5. Відповідь
+
+Юзеру потрібно підтвердження, що програма його зрозуміла.
+<!-- .element: class="fragment" data-fragment-index="0" --> 
+
+І зробила щось корисне. Про це можна повідомити через `print()`.
+<!-- .element: class="fragment" data-fragment-index="1" --> 
+
+(тоді юзер буде думати, що спілкується з Штучним Інтелектом. Наївний юзер!)
+<!-- .element: class="fragment" data-fragment-index="2" --> 
+<!-- .element: style="font-size:20px" -->
+
+```python[4]
+print("Привіт, як тебе звати, юзернейм?")
+answer = input()
+username = answer.strip()
+print(f"Ну що ж, {username}, зіграємо в гру?")
+```
+<!-- .element: class="fragment" data-fragment-index="3" --> 
+
+</section>
+
+---
+
+# TODO доробити презентацію
+
+    </script></section>
+   </div>
+  </div>
+
+   <script src="revealjs/dist/reveal.js"></script>
+   <script src="revealjs/plugin/zoom/zoom.js"></script>
+   <script src="revealjs/plugin/notes/notes.js"></script>
+   <script src="revealjs/plugin/search/search.js"></script>
+   <script src="revealjs/plugin/markdown/markdown.js"></script>
+   <script src="revealjs/plugin/menu/menu.js"></script>
+   <script src="revealjs/plugin/highlight/highlight.js"></script>
+   <script>
+    // Also available as an ES module, see:
+    // https://revealjs.com/initialization/
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        menu: {
+            themes: true,
+            sticky: true,
+            themesPath: 'revealjs/dist/theme/'
+        },
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMenu ]
+    });
+  </script>
+ </body>
+</html>
+
